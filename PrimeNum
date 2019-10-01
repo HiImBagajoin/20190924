@@ -1,0 +1,6 @@
+tag=1
+a=int(input())
+for i in range(2,a):
+    if(a%i)==0:
+        tag=0
+print(tag)
