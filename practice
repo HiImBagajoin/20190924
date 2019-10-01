@@ -1,9 +1,21 @@
 a=input()
 b=input()
 c=input()
-if(((int(a)**2)+(int(b)**2))<(int(c)**2)):
-    print("鈍角")
-elif(((int(a)**2)+(int(b)**2))==(int(c)**2)):
-    print("直角")
+
+if((a+b) >= c or (a+c) >= b or (b+c) >=a):
+    if(((int(a)**2)+(int(b)**2))<(int(c)**2)):
+        if(a==b):
+            print("等腰鈍角")
+        else:
+             print("鈍角")
+    elif(((int(a)**2)+(int(b)**2))==(int(c)**2)):
+        print("直角")
+    elif(a==b==c):
+        print("正三角")
+    elif(((int(a)**2)+(int(b)**2))>(int(c)**2)):
+        if(b==c or a==b):
+             print("等腰銳角")
+        else:
+             print("銳角")
 else:
-    print("銳角")
+    print("nah")
