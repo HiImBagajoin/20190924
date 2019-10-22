@@ -1,0 +1,13 @@
+endless=1
+dict1={"A":10000,"B":7000,"C":5000}
+sm=[]
+while(endless==1):
+    a=input("type:")
+    b=int(input())
+    if (b==0):
+        print(sm,sum(sm))
+        break
+    else:
+        num=dict1.get(a)
+        hehe=num*b
+        sm.append(hehe)
