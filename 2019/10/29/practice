@@ -1,0 +1,22 @@
+#def ca(b):
+#    sum=b*b*3.14
+#    return sum
+#a=int(input("半徑:"))
+#fin=ca(a)
+#print(fin)
+print("輸入若干數，輸入0結束")
+endless=0
+list1=[]
+while(endless==0):
+    a=int(input())
+    if(a==0):
+        break
+    else:
+        list1.append(a)
+
+def pa(a):
+    list1.sort()
+    return list1
+list2=pa(list1)
+num=len(list2)//2
+print(list1[num:(num+1)])
