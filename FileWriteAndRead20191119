@@ -1,0 +1,21 @@
+content='''Istill see ur shadows in my room
+cant't take back the love I gave u 
+it's to the point taht I love u and hate u 
+and I can not change u so I must replace u oh
+'''
+f=open('cc.txt','w')
+f.write(content)
+f.close()
+#import os,shutil,glob 
+#files=glob.glob("*.txt")+glob.glob("*.py")
+#for file in files:
+#    print(file)
+#cur_path=os.path.dirname(__file__)
+#destfile=cur_path+"\\"+"newfile.py"
+#shutil.copy("cc.txt",destfile)      
+#sample_tree=os.walk(cur_path)
+#for dirname,subdir,file in sample_tree:
+#    print(dirname)
+#    print(subdir)
+#    print(files)
+#    print()
