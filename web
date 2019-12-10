@@ -1,0 +1,29 @@
+#html_doc="""
+#<html><head><title>網頁標題</title></head>
+
+#<p class="title"><b>文件標題</b></p>
+
+#<p class="lyric">I usuallu have an answer to the question But this time I'm gon' be quiet
+#import requests, bs4
+#res = requests.get("https://www.good.is/popular/trump-posted-a-ridiculous-meme-of-himself-as-rocky")
+#res.raise_for_status()
+#sp = bs4.BeautifulSoup(res.text,"html.parser")
+#data2 = sp.find_all('div',{'class':'content'})
+#print(type(data2))
+#print(str(data2))
+#print(len(data2))
+#for i in range(len(data2)):
+#    print(data2[i].getText())
+import requests, webbrowser, bs4
+print("googleing")
+keyword=input("searching for?")
+res=requests.get('http://google/search?q='+keyword)
+res.raise_for_status()
+print(res.text)
+sp=bs4.BeautifulSoup(res.text,"html.parser")
+link=sp.find_all('a')
+numOpen=min(3,len(link))
+for i in range(numOpen):
+    print("第",i,"個")
+    print('http://google.com'+link[i].get('herf'))
+    webbrowser.open('http://google.com'+link[i].get('herf'))
