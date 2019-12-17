@@ -1,0 +1,23 @@
+#import hashlib
+#md5 =hashlib.md5
+#md5=hashlib.md5(b"test string").hexdigest
+#print(md5)
+import requests, webbrowser, os, bs4  
+res = requests.get('https://xkcd.com/')
+res.raise_for_status()
+sp=bs4.BeautifulSoup(res.text,"html.parser")
+container=sp.select("#comic")
+data1=container[0]
+data2=data1.find("img")
+print(type(data2))
+print(data2)
+data3="http:"+data2.get("src")
+print(type(data3))
+print(str(data3))
+resl=requests.get(data3)
+resl.raise_for_status()
+print(os.getcwd())
+imagefile=open("testfile","wb")
+for chunk in resl.iter_content(100000):
+    imagefile.write(chunk)
+    imagefile.close()
